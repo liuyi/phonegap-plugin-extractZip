@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.ourbrander.pgPlugin.ExtractZip"
+    version="0.1">
+
+    <name>ExtractZip</name>
+    <description>Cordova ExtractZip Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,ExtractZip</keywords>
+
+    <js-module src="www/ExtractZip.js" name="ExtractZip">
+        <merges target="navigator.extractZip" />
+    </js-module>
+
+    
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ExtractZip">
+                <param name="android-package" value="com.ourbrander.pgPlugin.ExtractZip"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ExtractZip.java" target-dir="src/com/ourbrander/pgPlugin/" />
+ 
+    </platform>
+
+     
+</plugin>
